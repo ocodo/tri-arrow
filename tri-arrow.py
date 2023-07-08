@@ -8,15 +8,16 @@ speed(0)
 hideturtle()
 
 penup()
+left(90)
 backward(45 * 11)
 left(90)
-forward(45 * 9)
+forward(45 * 11)
 right(90)
 
-for a in range(24):
+for a in range(26):
     for b in range(24):
-        ch = (b + 1)/24
-        color('black', (ch,ch/2 + 0.2,0.6))
+        ch = (b + 1)/25
+        color('black', (ch/3 + ((a/24)/1.6), ch/2 + 0.2, 0.7))
         begin_fill()
         for c in range(3):
             pendown()
