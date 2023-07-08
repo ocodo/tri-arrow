@@ -3,19 +3,22 @@
 from turtle import *
 
 scale = 1
+tracer(24,200)
 speed(0)
 hideturtle()
-color('black', 'white')
-begin_fill()
+
 penup()
 backward(45 * 11)
 left(90)
 forward(45 * 9)
 right(90)
 
-for _ in range(24):
-    for _ in range(24):
-        for _ in range(3):
+for a in range(24):
+    for b in range(24):
+        ch = (b + 1)/24
+        color('black', (ch,ch/2 + 0.2,0.6))
+        begin_fill()
+        for c in range(3):
             pendown()
             forward(25 * scale)
             left(120)
@@ -34,12 +37,18 @@ for _ in range(24):
             forward(25 * scale)
             left(60)
 
+        end_fill()
         penup()
         forward(45 * scale)
-    backward(45 * scale * 24)
+    if a % 2 == 0:
+        reverse = 25
+    else:
+        reverse = 24
+
+    backward(45 * scale * reverse)
     right(60)
     forward(45 * scale)
     left(60)
 
-end_fill()
+
 done()
