@@ -3,9 +3,10 @@
 from turtle import *
 
 scale = 1
-tracer(24,200)
+tracer(0,0)
 speed(0)
 hideturtle()
+pensize(2)
 
 penup()
 left(90)
@@ -17,7 +18,9 @@ right(90)
 for a in range(26):
     for b in range(24):
         ch = (b + 1)/25
-        color('black', (ch/3 + ((a/24)/1.6), ch/2 + 0.2, 0.7))
+        fill_color = (ch/3 + ((a/24)/1.6), ch/2 + 0.2, 0.7)
+        stroke_color = (ch/3 + ((a/24)/1.6),ch/2 + 0.21, 0.8)
+        color(stroke_color, fill_color)
         begin_fill()
         for c in range(3):
             pendown()
