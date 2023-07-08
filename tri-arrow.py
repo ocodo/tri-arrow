@@ -13,8 +13,8 @@ left(90)
 forward(45 * 9)
 right(90)
 
-for _ in range(23):
-    for _ in range(23):
+for _ in range(24):
+    for _ in range(24):
         for _ in range(3):
             pendown()
             forward(25 * scale)
