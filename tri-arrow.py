@@ -2,7 +2,10 @@
 
 from turtle import *
 
-scale = 1
+columns = 26
+rows = 24
+
+scale = 1.8
 tracer(0,0)
 speed(0)
 hideturtle()
@@ -15,11 +18,11 @@ left(90)
 forward(45 * 11)
 right(90)
 
-for a in range(26):
-    for b in range(24):
+for a in range(columns):
+    for b in range(rows):
         ch = (b + 1)/25
-        fill_color = (ch/3 + ((a/24)/1.6), ch/2 + 0.2, 0.7)
-        stroke_color = (ch/3 + ((a/24)/1.6),ch/2 + 0.21, 0.8)
+        fill_color = (ch/3 + ((a/columns)/1.6), ch/2 + 0.2, 0.7)
+        stroke_color = (ch/3 + ((a/columns)/1.6),ch/2 + 0.21, 0.8)
         color(stroke_color, fill_color)
         begin_fill()
         for c in range(3):
@@ -45,9 +48,9 @@ for a in range(26):
         penup()
         forward(45 * scale)
     if a % 2 == 0:
-        reverse = 25
+        reverse = columns - 1
     else:
-        reverse = 24
+        reverse = columns - 2
 
     backward(45 * scale * reverse)
     right(60)
