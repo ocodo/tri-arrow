@@ -2,19 +2,26 @@
 
 from turtle import *
 
-columns = 13
-rows = 13
+screen_width, screen_height = screensize()
 
-scale = 2.1
+scale = 1
+columns = 50 // 1
+rows = 25 // 1
+
+bgcolor("black")
+# speed(0)
+# tracer(24,10)
 tracer(0,0)
-speed(0)
 hideturtle()
+pu()
 pensize(2)
 
-goto(-500,-500)
+goto(-960,-510)
+pd()
+# showturtle()
 left(90)
 
-for col in range(columns):
+for col in range(50):
     for row in range(rows):
         ch = (row + 1)/25
         fill_color = (ch/3 + ((row/rows)/1.6), ch/2 + 0.2, 0.7)
