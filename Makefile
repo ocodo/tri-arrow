@@ -6,3 +6,6 @@ run-iso-cubes:
 
 run-trig-plot:
 	./trig-plot.py
+
+run-exponent-plot.py:
+	./exponent-plot.py
