@@ -3,3 +3,6 @@ run-tri-arrow:
 
 run-iso-cubes:
 	./iso-cubes.py
+
+run-trig-plot:
+	./trig-plot.py
