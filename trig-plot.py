@@ -11,7 +11,17 @@ def main(amplitude = 100, num_points = 100, extent = 440, pen_color = (1, 1/2, 0
         turtle.penup()
         turtle.goto(x, y)
         turtle.pendown()
-        turtle.dot(3, color)
+        turtle.dot(2, pen_color)
+
+    # Function to draw a point at a given (x, y) coordinate
+    def draw_tack(x, y, color=pen_color):
+        turtle.penup()
+        turtle.goto(x, y)
+        turtle.pendown()
+        turtle.seth(90)
+        turtle.pencolor(color)
+        turtle.forward(30)
+        turtle.pencolor(pen_color)
 
     # Set up the turtle
     turtle.hideturtle()
@@ -26,11 +36,11 @@ def main(amplitude = 100, num_points = 100, extent = 440, pen_color = (1, 1/2, 0
 
     # Draw Cosine Curve
     for angle in point_range:
-        draw_point(angle, amplitude * math.cos(math.radians(angle)))
+        draw_tack(angle, amplitude * math.cos(math.radians(angle)))
 
     # Draw Sine Curve
     for angle in point_range:
-        draw_point(angle, amplitude * math.sin(math.radians(angle)))
+        draw_tack(angle, amplitude * math.sin(math.radians(angle)), color="cyan")
 
     turtle.done()
 
